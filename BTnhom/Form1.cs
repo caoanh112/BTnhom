@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace BTnhom
 {
-    public partial class Form1 : Form
+    public partial class frm_main : Form
     {
-        public Form1()
+        public frm_main()
         {
             InitializeComponent();
+        }
+
+        private void informationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_info info = new frm_info();
+            info.Show();
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_login login = new frm_login();
+            login.Show();
         }
     }
 }
