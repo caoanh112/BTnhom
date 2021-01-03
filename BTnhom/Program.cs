@@ -14,6 +14,7 @@ namespace BTnhom
         [STAThread]
         static void Main()
         {
+            // Phương
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
