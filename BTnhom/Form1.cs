@@ -28,5 +28,26 @@ namespace BTnhom
             frm_login login = new frm_login();
             login.Show();
         }
+
+        private void processChainToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_process_chain frm_chain = new frm_process_chain();
+            frm_chain.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult re = MessageBox.Show("Do you want to exit?", "Exit comfirm", MessageBoxButtons.YesNo);
+            if (re==DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void bookSalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_book_sale frm_book = new frm_book_sale();
+            frm_book.Show();
+        }
     }
 }

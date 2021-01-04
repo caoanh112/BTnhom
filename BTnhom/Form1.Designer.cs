@@ -29,21 +29,23 @@ namespace BTnhom
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.functionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.processChainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -52,7 +54,7 @@ namespace BTnhom
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(951, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(951, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -61,24 +63,28 @@ namespace BTnhom
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginToolStripMenuItem,
             this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(58, 32);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // loginToolStripMenuItem
             // 
+            this.loginToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loginToolStripMenuItem.Image")));
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // functionToolStripMenuItem
             // 
@@ -87,43 +93,49 @@ namespace BTnhom
             this.processChainToolStripMenuItem,
             this.studentManagementToolStripMenuItem});
             this.functionToolStripMenuItem.Name = "functionToolStripMenuItem";
-            this.functionToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
+            this.functionToolStripMenuItem.Size = new System.Drawing.Size(104, 32);
             this.functionToolStripMenuItem.Text = "Function";
+            // 
+            // bookSalesToolStripMenuItem
+            // 
+            this.bookSalesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bookSalesToolStripMenuItem.Image")));
+            this.bookSalesToolStripMenuItem.Name = "bookSalesToolStripMenuItem";
+            this.bookSalesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.bookSalesToolStripMenuItem.Size = new System.Drawing.Size(377, 36);
+            this.bookSalesToolStripMenuItem.Text = "Book sales";
+            this.bookSalesToolStripMenuItem.Click += new System.EventHandler(this.bookSalesToolStripMenuItem_Click);
+            // 
+            // processChainToolStripMenuItem
+            // 
+            this.processChainToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("processChainToolStripMenuItem.Image")));
+            this.processChainToolStripMenuItem.Name = "processChainToolStripMenuItem";
+            this.processChainToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.processChainToolStripMenuItem.Size = new System.Drawing.Size(377, 36);
+            this.processChainToolStripMenuItem.Text = "Process chain";
+            this.processChainToolStripMenuItem.Click += new System.EventHandler(this.processChainToolStripMenuItem_Click);
+            // 
+            // studentManagementToolStripMenuItem
+            // 
+            this.studentManagementToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("studentManagementToolStripMenuItem.Image")));
+            this.studentManagementToolStripMenuItem.Name = "studentManagementToolStripMenuItem";
+            this.studentManagementToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.studentManagementToolStripMenuItem.Size = new System.Drawing.Size(377, 36);
+            this.studentManagementToolStripMenuItem.Text = "Student management";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.informationToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(69, 32);
             this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // bookSalesToolStripMenuItem
-            // 
-            this.bookSalesToolStripMenuItem.Name = "bookSalesToolStripMenuItem";
-            this.bookSalesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.bookSalesToolStripMenuItem.Size = new System.Drawing.Size(352, 34);
-            this.bookSalesToolStripMenuItem.Text = "Book sales";
-            // 
-            // processChainToolStripMenuItem
-            // 
-            this.processChainToolStripMenuItem.Name = "processChainToolStripMenuItem";
-            this.processChainToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.processChainToolStripMenuItem.Size = new System.Drawing.Size(352, 34);
-            this.processChainToolStripMenuItem.Text = "Process chain";
-            // 
-            // studentManagementToolStripMenuItem
-            // 
-            this.studentManagementToolStripMenuItem.Name = "studentManagementToolStripMenuItem";
-            this.studentManagementToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.studentManagementToolStripMenuItem.Size = new System.Drawing.Size(352, 34);
-            this.studentManagementToolStripMenuItem.Text = "Student management";
             // 
             // informationToolStripMenuItem
             // 
+            this.informationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("informationToolStripMenuItem.Image")));
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
             this.informationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(279, 36);
             this.informationToolStripMenuItem.Text = "&Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
