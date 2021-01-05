@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="book_sales.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +102,12 @@
     <Compile Include="frm_process_chain.Designer.cs">
       <DependentUpon>frm_process_chain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_student_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_student_management.Designer.cs">
+      <DependentUpon>frm_student_management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -117,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_process_chain.resx">
       <DependentUpon>frm_process_chain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_student_management.resx">
+      <DependentUpon>frm_student_management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

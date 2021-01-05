@@ -207,7 +207,8 @@ namespace BTnhom
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(670, 733);
+            this.ClientSize = new System.Drawing.Size(676, 747);
+            this.ControlBox = false;
             this.Controls.Add(this.btn_exitlogin);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBox1);

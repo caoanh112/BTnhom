@@ -49,5 +49,11 @@ namespace BTnhom
             frm_book_sale frm_book = new frm_book_sale();
             frm_book.Show();
         }
+
+        private void studentManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_student_management student = new frm_student_management();
+            student.Show();
+        }
     }
 }
