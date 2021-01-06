@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="book_sales.cs" />
+    <Compile Include="chain_process.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
