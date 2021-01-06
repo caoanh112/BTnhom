@@ -32,7 +32,7 @@ namespace BTnhom
             this.grb_input = new System.Windows.Forms.GroupBox();
             this.txt_input = new System.Windows.Forms.TextBox();
             this.grb_output = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_output = new System.Windows.Forms.TextBox();
             this.btn_num_char = new System.Windows.Forms.Button();
             this.btn_capitally = new System.Windows.Forms.Button();
             this.btn_lowercase = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@ namespace BTnhom
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_seperation = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -88,7 +88,7 @@ namespace BTnhom
             // 
             // grb_output
             // 
-            this.grb_output.Controls.Add(this.textBox1);
+            this.grb_output.Controls.Add(this.txt_output);
             this.grb_output.Location = new System.Drawing.Point(467, 25);
             this.grb_output.Name = "grb_output";
             this.grb_output.Size = new System.Drawing.Size(399, 161);
@@ -96,13 +96,13 @@ namespace BTnhom
             this.grb_output.TabStop = false;
             this.grb_output.Text = "output";
             // 
-            // textBox1
+            // txt_output
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 23);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(384, 132);
-            this.textBox1.TabIndex = 0;
+            this.txt_output.Location = new System.Drawing.Point(6, 23);
+            this.txt_output.Multiline = true;
+            this.txt_output.Name = "txt_output";
+            this.txt_output.Size = new System.Drawing.Size(384, 132);
+            this.txt_output.TabIndex = 0;
             // 
             // btn_num_char
             // 
@@ -211,6 +211,7 @@ namespace BTnhom
             this.btn_Separation_words.TabIndex = 1;
             this.btn_Separation_words.Text = "Separation of words";
             this.btn_Separation_words.UseVisualStyleBackColor = true;
+            this.btn_Separation_words.Click += new System.EventHandler(this.btn_Separation_words_Click);
             // 
             // btn_change_substring
             // 
@@ -269,12 +270,12 @@ namespace BTnhom
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 2;
             // 
-            // textBox5
+            // txt_seperation
             // 
-            this.textBox5.Location = new System.Drawing.Point(766, 409);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 2;
+            this.txt_seperation.Location = new System.Drawing.Point(766, 409);
+            this.txt_seperation.Name = "txt_seperation";
+            this.txt_seperation.Size = new System.Drawing.Size(100, 26);
+            this.txt_seperation.TabIndex = 2;
             // 
             // button3
             // 
@@ -376,7 +377,7 @@ namespace BTnhom
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txt_seperation);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -415,7 +416,7 @@ namespace BTnhom
         private System.Windows.Forms.GroupBox grb_input;
         private System.Windows.Forms.TextBox txt_input;
         private System.Windows.Forms.GroupBox grb_output;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_output;
         private System.Windows.Forms.Button btn_num_char;
         private System.Windows.Forms.Button btn_capitally;
         private System.Windows.Forms.Button btn_lowercase;
@@ -435,7 +436,7 @@ namespace BTnhom
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_seperation;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;

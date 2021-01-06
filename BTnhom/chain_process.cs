@@ -44,8 +44,36 @@ namespace BTnhom
                     }
                 }
             }
-            return num;
+            return num;           
 
         }
+
+        //tach tu
+        public string separation(string input, string word)
+        {
+            int space = 0;
+            string output = "";
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (char.IsWhiteSpace(input[i]) == true)
+                {
+                    space++;
+                }
+            }
+            string[] str = input.Split(' ');
+            for (int i = 0; i <= space; i++)
+            {
+                if (str[i] == word)
+                {
+                    str[i] = "" + "\r\n";
+
+                }
+                output += str[i] + " ";
+
+            }
+            return output;
+        }
+            
     }
 }
