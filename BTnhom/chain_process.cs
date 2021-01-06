@@ -8,6 +8,7 @@ namespace BTnhom
 {
     class chain_process
     {
+        //chuyển chuỗi in hoa
         public string Upper(string input)
         {
             string output = "";
@@ -17,7 +18,7 @@ namespace BTnhom
             }
             return output;
         }
-
+        //chuyển chuỗi in thường
         public string Lower(string input)
         {
             string output = "";
@@ -27,7 +28,7 @@ namespace BTnhom
             }
             return output;
         }
-
+        //đếm số kí tự In hoa, thường hoặc số
         public int Count(string input,string x)
         {
             int num = 0;
@@ -64,7 +65,7 @@ namespace BTnhom
 
         }
 
-        //tach tu
+        //tách từ khỏi chuỗi
         public string separation(string input, string word)
         {
             int space = 0;
