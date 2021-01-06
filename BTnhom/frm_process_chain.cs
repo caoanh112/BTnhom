@@ -52,5 +52,17 @@ namespace BTnhom
         {
 
         }
+
+        private void btn_mix_chain_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            txt_output.Text = chain.mix(txt_input.Text);
+        }
+
+        private void btn_chain_optimization_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            txt_output.Text = chain.Opimal(txt_input.Text);
+        }
     }
 }

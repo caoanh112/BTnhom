@@ -91,6 +91,26 @@ namespace BTnhom
             }
             return output;
         }
-            
+        //Đảo chuỗi
+        public string mix(string input)
+        {
+            string output = "";
+            for (int i = input.Length; i > 0; i--)
+            {
+                output = output + input[i - 1];
+            }
+            return output;
+        }
+        //Tối ưu chuỗi
+        public string Opimal(string input)
+        {
+            string output = "";
+            string[] arrWord = input.Split(' ');
+            for(int i=0; i<arrWord.Length;i++)
+            {
+                if (arrWord[i] != "") output += arrWord[i] + " ";
+            }    
+            return output;
+        }
     }
 }

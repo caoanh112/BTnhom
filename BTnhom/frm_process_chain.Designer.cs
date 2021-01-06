@@ -170,6 +170,7 @@ namespace BTnhom
             this.btn_mix_chain.TabIndex = 1;
             this.btn_mix_chain.Text = "Mix chain";
             this.btn_mix_chain.UseVisualStyleBackColor = true;
+            this.btn_mix_chain.Click += new System.EventHandler(this.btn_mix_chain_Click);
             // 
             // btn_chain_optimization
             // 
@@ -179,6 +180,7 @@ namespace BTnhom
             this.btn_chain_optimization.TabIndex = 1;
             this.btn_chain_optimization.Text = "Opimal chain";
             this.btn_chain_optimization.UseVisualStyleBackColor = true;
+            this.btn_chain_optimization.Click += new System.EventHandler(this.btn_chain_optimization_Click);
             // 
             // btn_first_position
             // 
