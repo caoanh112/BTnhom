@@ -18,7 +18,7 @@ namespace BTnhom
             InitializeComponent();
         }
 
-        private void btn_Separation_words_Click(object sender, EventArgs e)
+        private void btn_separate_words_Click(object sender, EventArgs e)
         {
             chain_process chain = new chain_process();
             txt_output.Text = chain.separation(txt_input.Text, txt_seperation.Text);
