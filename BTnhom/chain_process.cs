@@ -8,12 +8,24 @@ namespace BTnhom
 {
     class chain_process
     {
-        public int num_char(string input)
+        public string Upper(string input)
         {
+            string output = "";
+            for (int i=0;i<input.Length; i++)
+            {
+                output += char.ToUpper(input[i]);
+            }
+            return output;
+        }
 
-            int num=0;
-            num = input.Length;
-            return num;
+        public string Lower(string input)
+        {
+            string output = "";
+            for (int i = 0; i < input.Length; i++)
+            {
+                output += Char.ToLower(input[i]);
+            }
+            return output;
         }
 
         public int Count(string input,string x)
@@ -23,7 +35,7 @@ namespace BTnhom
             {
                 for(int i=0; i< input.Length; i++)
                 {
-                    if (Char.IsUpper(input[i])) num++;
+                    if (Char.IsUpper(input[i])==true) num++;
                 }    
 
             }
@@ -33,15 +45,19 @@ namespace BTnhom
                 {
                     for(int i=0;i<input.Length;i++)
                     {
-                        if (Char.IsLower(input[i])) num++;
+                        if (Char.IsLower(input[i])==true) num++;
                     }    
                 }   
                 else
                 {
-                    for(int i=0;i<input.Length;i++)
+                    if (x == "digit")
                     {
-                        if (char.IsNumber(input[i])) num++;
+                        for (int i = 0; i < input.Length; i++)
+                        {
+                            if (char.IsNumber(input[i]) == true) num++;
+                        }
                     }
+                    
                 }
             }
             return num;           

@@ -38,7 +38,7 @@ namespace BTnhom
             this.btn_lowercase = new System.Windows.Forms.Button();
             this.btn_num_capital = new System.Windows.Forms.Button();
             this.btn_num_lowercase = new System.Windows.Forms.Button();
-            this.btn_characters_numbers = new System.Windows.Forms.Button();
+            this.btn_num_digit = new System.Windows.Forms.Button();
             this.btn_chain_island = new System.Windows.Forms.Button();
             this.btn_chain_optimization = new System.Windows.Forms.Button();
             this.btn_find_position_first = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@ namespace BTnhom
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.txt_seperation = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_num_upper = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -112,6 +112,7 @@ namespace BTnhom
             this.btn_num_char.TabIndex = 1;
             this.btn_num_char.Text = "Number of char";
             this.btn_num_char.UseVisualStyleBackColor = true;
+            this.btn_num_char.Click += new System.EventHandler(this.btn_num_char_Click);
             // 
             // btn_capitally
             // 
@@ -121,6 +122,7 @@ namespace BTnhom
             this.btn_capitally.TabIndex = 1;
             this.btn_capitally.Text = "Capitally";
             this.btn_capitally.UseVisualStyleBackColor = true;
+            this.btn_capitally.Click += new System.EventHandler(this.btn_capitally_Click);
             // 
             // btn_lowercase
             // 
@@ -130,6 +132,7 @@ namespace BTnhom
             this.btn_lowercase.TabIndex = 1;
             this.btn_lowercase.Text = "Lowercase";
             this.btn_lowercase.UseVisualStyleBackColor = true;
+            this.btn_lowercase.Click += new System.EventHandler(this.btn_lowercase_Click);
             // 
             // btn_num_capital
             // 
@@ -148,15 +151,16 @@ namespace BTnhom
             this.btn_num_lowercase.TabIndex = 1;
             this.btn_num_lowercase.Text = "Number of lowercase";
             this.btn_num_lowercase.UseVisualStyleBackColor = true;
+            this.btn_num_lowercase.Click += new System.EventHandler(this.btn_num_lowercase_Click);
             // 
-            // btn_characters_numbers
+            // btn_num_digit
             // 
-            this.btn_characters_numbers.Location = new System.Drawing.Point(72, 518);
-            this.btn_characters_numbers.Name = "btn_characters_numbers";
-            this.btn_characters_numbers.Size = new System.Drawing.Size(358, 34);
-            this.btn_characters_numbers.TabIndex = 1;
-            this.btn_characters_numbers.Text = "Count characters numbers";
-            this.btn_characters_numbers.UseVisualStyleBackColor = true;
+            this.btn_num_digit.Location = new System.Drawing.Point(72, 518);
+            this.btn_num_digit.Name = "btn_num_digit";
+            this.btn_num_digit.Size = new System.Drawing.Size(358, 34);
+            this.btn_num_digit.TabIndex = 1;
+            this.btn_num_digit.Text = "Number of digit ";
+            this.btn_num_digit.UseVisualStyleBackColor = true;
             // 
             // btn_chain_island
             // 
@@ -277,14 +281,15 @@ namespace BTnhom
             this.txt_seperation.Size = new System.Drawing.Size(100, 26);
             this.txt_seperation.TabIndex = 2;
             // 
-            // button3
+            // btn_num_upper
             // 
-            this.button3.Location = new System.Drawing.Point(72, 401);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(358, 34);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Number of capital ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_num_upper.Location = new System.Drawing.Point(72, 401);
+            this.btn_num_upper.Name = "btn_num_upper";
+            this.btn_num_upper.Size = new System.Drawing.Size(358, 34);
+            this.btn_num_upper.TabIndex = 1;
+            this.btn_num_upper.Text = "Number of uppercase";
+            this.btn_num_upper.UseVisualStyleBackColor = true;
+            this.btn_num_upper.Click += new System.EventHandler(this.btn_num_upper_Click);
             // 
             // textBox6
             // 
@@ -383,9 +388,9 @@ namespace BTnhom
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btn_chain_optimization);
             this.Controls.Add(this.btn_chain_island);
-            this.Controls.Add(this.btn_characters_numbers);
+            this.Controls.Add(this.btn_num_digit);
             this.Controls.Add(this.btn_num_lowercase);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_num_upper);
             this.Controls.Add(this.btn_num_capital);
             this.Controls.Add(this.btn_lowercase);
             this.Controls.Add(this.btn_capitally);
@@ -422,7 +427,7 @@ namespace BTnhom
         private System.Windows.Forms.Button btn_lowercase;
         private System.Windows.Forms.Button btn_num_capital;
         private System.Windows.Forms.Button btn_num_lowercase;
-        private System.Windows.Forms.Button btn_characters_numbers;
+        private System.Windows.Forms.Button btn_num_digit;
         private System.Windows.Forms.Button btn_chain_island;
         private System.Windows.Forms.Button btn_chain_optimization;
         private System.Windows.Forms.Button btn_find_position_first;
@@ -437,7 +442,7 @@ namespace BTnhom
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox txt_seperation;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_num_upper;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
