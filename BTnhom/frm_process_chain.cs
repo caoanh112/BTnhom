@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace BTnhom
 {
@@ -63,6 +64,20 @@ namespace BTnhom
         {
             chain_process chain = new chain_process();
             txt_output.Text = chain.Opimal(txt_input.Text);
+        }
+
+        private void btn_text_void_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            txt_output.Text = chain.text_to_void(txt_input.Text);
+            
+        }
+
+        private void frm_process_chain_Load(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();            
+            Thread.Sleep(500);
+            chain.text_to_void("Chào bạn, đây là chương trình xử lý văn bản");
         }
     }
 }

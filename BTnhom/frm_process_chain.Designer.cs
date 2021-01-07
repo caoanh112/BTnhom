@@ -64,6 +64,7 @@ namespace BTnhom
             this.txt_filter_p1 = new System.Windows.Forms.TextBox();
             this.lbl_p1 = new System.Windows.Forms.Label();
             this.lbl_p2 = new System.Windows.Forms.Label();
+            this.btn_text_void = new System.Windows.Forms.Button();
             this.grb_input.SuspendLayout();
             this.grb_output.SuspendLayout();
             this.SuspendLayout();
@@ -369,11 +370,22 @@ namespace BTnhom
             this.lbl_p2.TabIndex = 3;
             this.lbl_p2.Text = "P2";
             // 
+            // btn_text_void
+            // 
+            this.btn_text_void.Location = new System.Drawing.Point(72, 691);
+            this.btn_text_void.Name = "btn_text_void";
+            this.btn_text_void.Size = new System.Drawing.Size(358, 33);
+            this.btn_text_void.TabIndex = 4;
+            this.btn_text_void.Text = "Text to void";
+            this.btn_text_void.UseVisualStyleBackColor = true;
+            this.btn_text_void.Click += new System.EventHandler(this.btn_text_void_Click);
+            // 
             // frm_process_chain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 700);
+            this.ClientSize = new System.Drawing.Size(928, 779);
+            this.Controls.Add(this.btn_text_void);
             this.Controls.Add(this.lbl_p2);
             this.Controls.Add(this.lbl_p1);
             this.Controls.Add(this.lbl_position);
@@ -409,6 +421,7 @@ namespace BTnhom
             this.Controls.Add(this.grb_input);
             this.Name = "frm_process_chain";
             this.Text = "Process chain ";
+            this.Load += new System.EventHandler(this.frm_process_chain_Load);
             this.grb_input.ResumeLayout(false);
             this.grb_input.PerformLayout();
             this.grb_output.ResumeLayout(false);
@@ -455,5 +468,6 @@ namespace BTnhom
         private System.Windows.Forms.TextBox txt_filter_p1;
         private System.Windows.Forms.Label lbl_p1;
         private System.Windows.Forms.Label lbl_p2;
+        private System.Windows.Forms.Button btn_text_void;
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace BTnhom
 {
@@ -111,6 +113,32 @@ namespace BTnhom
                 if (arrWord[i] != "") output += arrWord[i] + " ";
             }    
             return output;
+        }
+
+        // chuyển txt ==> âm thanh 
+        public string text_to_void(string input)
+        {
+            String result = Task.Run(async () =>
+            {
+
+                String payload = input;
+
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("api-key", "qM0gRjqS9rXH4gKCTa5sgtLh0aTKa6Au");
+                client.DefaultRequestHeaders.Add("speed", "");
+                client.DefaultRequestHeaders.Add("voice", "banmai");                
+                var response = await client.PostAsync("https://api.fpt.ai/hmi/tts/v5", new StringContent(payload));                
+                return await response.Content.ReadAsStringAsync();                
+            }).GetAwaiter().GetResult();
+            //cắt chuỗi JSON 
+            string[] str = result.Split('"');
+            //play url âm thanh
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            Thread.Sleep(500);
+            wplayer.URL = str[3];            
+            wplayer.controls.play();
+            return "time delay few seconds..... \r\n if nothing happens, please click it again!";
+
         }
     }
 }
