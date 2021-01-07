@@ -69,7 +69,8 @@ namespace BTnhom
         private void btn_text_void_Click(object sender, EventArgs e)
         {
             chain_process chain = new chain_process();
-            txt_output.Text = chain.text_to_void(txt_input.Text);
+            txt_output.Text = "time delay few seconds..... \r\n if nothing happens, please click it again! \r\n";
+            txt_output.Text += chain.text_to_void(txt_input.Text);
             
         }
 

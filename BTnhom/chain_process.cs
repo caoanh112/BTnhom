@@ -134,10 +134,10 @@ namespace BTnhom
             string[] str = result.Split('"');
             //play url âm thanh
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            Thread.Sleep(500);
+            Thread.Sleep(600);
             wplayer.URL = str[3];            
             wplayer.controls.play();
-            return "time delay few seconds..... \r\n if nothing happens, please click it again!";
+            return str[3];
 
         }
     }
