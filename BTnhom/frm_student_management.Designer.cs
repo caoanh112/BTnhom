@@ -29,6 +29,7 @@ namespace BTnhom
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_first_name = new System.Windows.Forms.Label();
             this.lbl_last_name = new System.Windows.Forms.Label();
@@ -45,6 +46,19 @@ namespace BTnhom
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.student_managementDataSet = new BTnhom.student_managementDataSet();
+            this.studentinformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.student_informationTableAdapter = new BTnhom.student_managementDataSetTableAdapters.student_informationTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datebirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultycodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student_managementDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentinformationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_id
@@ -174,6 +188,7 @@ namespace BTnhom
             this.btn_add.TabIndex = 4;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_edit
             // 
@@ -205,11 +220,108 @@ namespace BTnhom
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeight = 34;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.firstnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.datebirthDataGridViewTextBoxColumn,
+            this.sexDataGridViewTextBoxColumn,
+            this.facultycodeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.studentinformationBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(48, 240);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1083, 297);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // student_managementDataSet
+            // 
+            this.student_managementDataSet.DataSetName = "student_managementDataSet";
+            this.student_managementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentinformationBindingSource
+            // 
+            this.studentinformationBindingSource.DataMember = "student_information";
+            this.studentinformationBindingSource.DataSource = this.student_managementDataSet;
+            // 
+            // student_informationTableAdapter
+            // 
+            this.student_informationTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "First_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "First name";
+            this.firstnameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.firstnameDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "Last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Last name";
+            this.lastnameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastnameDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // datebirthDataGridViewTextBoxColumn
+            // 
+            this.datebirthDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.datebirthDataGridViewTextBoxColumn.DataPropertyName = "Date_birth";
+            this.datebirthDataGridViewTextBoxColumn.HeaderText = "Date of birth";
+            this.datebirthDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.datebirthDataGridViewTextBoxColumn.Name = "datebirthDataGridViewTextBoxColumn";
+            this.datebirthDataGridViewTextBoxColumn.ReadOnly = true;
+            this.datebirthDataGridViewTextBoxColumn.Width = 133;
+            // 
+            // sexDataGridViewTextBoxColumn
+            // 
+            this.sexDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.sexDataGridViewTextBoxColumn.DataPropertyName = "Sex";
+            this.sexDataGridViewTextBoxColumn.HeaderText = "Sex";
+            this.sexDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sexDataGridViewTextBoxColumn.Name = "sexDataGridViewTextBoxColumn";
+            this.sexDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sexDataGridViewTextBoxColumn.Width = 72;
+            // 
+            // facultycodeDataGridViewTextBoxColumn
+            // 
+            this.facultycodeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.facultycodeDataGridViewTextBoxColumn.DataPropertyName = "Faculty_code";
+            this.facultycodeDataGridViewTextBoxColumn.HeaderText = "Faculty code";
+            this.facultycodeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.facultycodeDataGridViewTextBoxColumn.Name = "facultycodeDataGridViewTextBoxColumn";
+            this.facultycodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.facultycodeDataGridViewTextBoxColumn.Width = 90;
+            // 
             // frm_student_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1172, 684);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_edit);
@@ -228,6 +340,10 @@ namespace BTnhom
             this.Controls.Add(this.lbl_id);
             this.Name = "frm_student_management";
             this.Text = "frm_student_management";
+            this.Load += new System.EventHandler(this.frm_student_management_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.student_managementDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentinformationBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +367,15 @@ namespace BTnhom
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private student_managementDataSet student_managementDataSet;
+        private System.Windows.Forms.BindingSource studentinformationBindingSource;
+        private student_managementDataSetTableAdapters.student_informationTableAdapter student_informationTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datebirthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn facultycodeDataGridViewTextBoxColumn;
     }
 }
