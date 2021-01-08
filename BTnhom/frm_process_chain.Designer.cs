@@ -191,6 +191,7 @@ namespace BTnhom
             this.btn_first_position.TabIndex = 1;
             this.btn_first_position.Text = "First appeared position";
             this.btn_first_position.UseVisualStyleBackColor = true;
+            this.btn_first_position.Click += new System.EventHandler(this.btn_first_position_Click);
             // 
             // btn_find_position_last
             // 
@@ -200,6 +201,7 @@ namespace BTnhom
             this.btn_find_position_last.TabIndex = 1;
             this.btn_find_position_last.Text = "Last appeared position";
             this.btn_find_position_last.UseVisualStyleBackColor = true;
+            this.btn_find_position_last.Click += new System.EventHandler(this.btn_find_position_last_Click);
             // 
             // btn_occurrences
             // 
@@ -209,6 +211,7 @@ namespace BTnhom
             this.btn_occurrences.TabIndex = 1;
             this.btn_occurrences.Text = "Number of occurrences";
             this.btn_occurrences.UseVisualStyleBackColor = true;
+            this.btn_occurrences.Click += new System.EventHandler(this.btn_occurrences_Click);
             // 
             // btn_separate_words
             // 
@@ -228,6 +231,7 @@ namespace BTnhom
             this.btn_change_substring.TabIndex = 1;
             this.btn_change_substring.Text = "Replace substring";
             this.btn_change_substring.UseVisualStyleBackColor = true;
+            this.btn_change_substring.Click += new System.EventHandler(this.btn_change_substring_Click);
             // 
             // btn_delete_substring
             // 
@@ -237,6 +241,7 @@ namespace BTnhom
             this.btn_delete_substring.TabIndex = 1;
             this.btn_delete_substring.Text = "Delete the substring";
             this.btn_delete_substring.UseVisualStyleBackColor = true;
+            this.btn_delete_substring.Click += new System.EventHandler(this.btn_delete_substring_Click);
             // 
             // btn_insert_string
             // 
@@ -246,6 +251,7 @@ namespace BTnhom
             this.btn_insert_string.TabIndex = 1;
             this.btn_insert_string.Text = "Insert string";
             this.btn_insert_string.UseVisualStyleBackColor = true;
+            this.btn_insert_string.Click += new System.EventHandler(this.btn_insert_string_Click);
             // 
             // btn_filtered_extraction
             // 
@@ -255,6 +261,7 @@ namespace BTnhom
             this.btn_filtered_extraction.TabIndex = 1;
             this.btn_filtered_extraction.Text = "Filtered extraction";
             this.btn_filtered_extraction.UseVisualStyleBackColor = true;
+            this.btn_filtered_extraction.Click += new System.EventHandler(this.btn_filtered_extraction_Click);
             // 
             // txt_first_position
             // 

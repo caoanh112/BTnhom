@@ -80,5 +80,51 @@ namespace BTnhom
             Thread.Sleep(500);
             chain.text_to_void("Chào bạn, đây là chương trình xử lý văn bản");
         }
+
+        private void btn_first_position_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            txt_output.Text = "Vị trí cần tìm là " + chain.firstposition(txt_input.Text, txt_first_position.Text).ToString();
+        }
+
+        private void btn_find_position_last_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            txt_output.Text = "Vị trí cần tìm là " + chain.lastposition(txt_input.Text, txt_last_position.Text).ToString();
+        }
+
+        private void btn_occurrences_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            txt_output.Text = "Số lần xuất hiện là " + chain.Number(txt_input.Text, num_occurrences.Text).ToString();
+        }
+
+        private void btn_change_substring_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            txt_output.Text = chain.change(txt_input.Text, txt_replace_string.Text, txt_new_string.Text);
+        }
+
+        private void btn_delete_substring_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            txt_output.Text = chain.delete(txt_input.Text, txt_del_string.Text);
+        }
+
+        private void btn_insert_string_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            int p = int.Parse(txt_insert_position.Text);
+            txt_output.Text = chain.insert(txt_input.Text, txt_insert.Text, p);
+        }
+
+        private void btn_filtered_extraction_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            int p1 = int.Parse(txt_filter_p1.Text), p2 = int.Parse(txt_filter_p2.Text);
+            txt_output.Text = chain.filter(txt_input.Text, p1, p2);
+
+           
+        }
     }
 }
