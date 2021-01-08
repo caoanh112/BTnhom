@@ -79,7 +79,7 @@ namespace BTnhom
             // 
             this.lbl_first_name.AutoSize = true;
             this.lbl_first_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_first_name.Location = new System.Drawing.Point(6, 234);
+            this.lbl_first_name.Location = new System.Drawing.Point(6, 141);
             this.lbl_first_name.Name = "lbl_first_name";
             this.lbl_first_name.Size = new System.Drawing.Size(109, 25);
             this.lbl_first_name.TabIndex = 0;
@@ -89,7 +89,7 @@ namespace BTnhom
             // 
             this.lbl_last_name.AutoSize = true;
             this.lbl_last_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_last_name.Location = new System.Drawing.Point(6, 147);
+            this.lbl_last_name.Location = new System.Drawing.Point(6, 211);
             this.lbl_last_name.Name = "lbl_last_name";
             this.lbl_last_name.Size = new System.Drawing.Size(109, 25);
             this.lbl_last_name.TabIndex = 0;
@@ -99,7 +99,7 @@ namespace BTnhom
             // 
             this.lbl_date_birth.AutoSize = true;
             this.lbl_date_birth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_date_birth.Location = new System.Drawing.Point(6, 323);
+            this.lbl_date_birth.Location = new System.Drawing.Point(6, 292);
             this.lbl_date_birth.Name = "lbl_date_birth";
             this.lbl_date_birth.Size = new System.Drawing.Size(122, 25);
             this.lbl_date_birth.TabIndex = 0;
@@ -109,7 +109,7 @@ namespace BTnhom
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 406);
+            this.label2.Location = new System.Drawing.Point(6, 375);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 25);
             this.label2.TabIndex = 0;
@@ -119,7 +119,7 @@ namespace BTnhom
             // 
             this.lbl_faculty.AutoSize = true;
             this.lbl_faculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_faculty.Location = new System.Drawing.Point(6, 494);
+            this.lbl_faculty.Location = new System.Drawing.Point(6, 463);
             this.lbl_faculty.Name = "lbl_faculty";
             this.lbl_faculty.Size = new System.Drawing.Size(129, 25);
             this.lbl_faculty.TabIndex = 0;
@@ -136,7 +136,7 @@ namespace BTnhom
             // txt_first_name
             // 
             this.txt_first_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_first_name.Location = new System.Drawing.Point(136, 231);
+            this.txt_first_name.Location = new System.Drawing.Point(136, 138);
             this.txt_first_name.Name = "txt_first_name";
             this.txt_first_name.Size = new System.Drawing.Size(202, 30);
             this.txt_first_name.TabIndex = 1;
@@ -144,7 +144,7 @@ namespace BTnhom
             // txt_last_name
             // 
             this.txt_last_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_last_name.Location = new System.Drawing.Point(136, 144);
+            this.txt_last_name.Location = new System.Drawing.Point(136, 208);
             this.txt_last_name.Name = "txt_last_name";
             this.txt_last_name.Size = new System.Drawing.Size(202, 30);
             this.txt_last_name.TabIndex = 1;
@@ -152,7 +152,7 @@ namespace BTnhom
             // txt_faculty
             // 
             this.txt_faculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_faculty.Location = new System.Drawing.Point(136, 491);
+            this.txt_faculty.Location = new System.Drawing.Point(136, 460);
             this.txt_faculty.Name = "txt_faculty";
             this.txt_faculty.Size = new System.Drawing.Size(202, 30);
             this.txt_faculty.TabIndex = 1;
@@ -164,7 +164,7 @@ namespace BTnhom
             this.cmb_sex.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmb_sex.Location = new System.Drawing.Point(136, 403);
+            this.cmb_sex.Location = new System.Drawing.Point(136, 372);
             this.cmb_sex.Name = "cmb_sex";
             this.cmb_sex.Size = new System.Drawing.Size(202, 33);
             this.cmb_sex.TabIndex = 2;
@@ -172,7 +172,7 @@ namespace BTnhom
             // dtp_birth
             // 
             this.dtp_birth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_birth.Location = new System.Drawing.Point(136, 318);
+            this.dtp_birth.Location = new System.Drawing.Point(136, 287);
             this.dtp_birth.Name = "dtp_birth";
             this.dtp_birth.Size = new System.Drawing.Size(202, 30);
             this.dtp_birth.TabIndex = 3;
@@ -219,6 +219,7 @@ namespace BTnhom
             this.btn_save.TabIndex = 4;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // studentinformationBindingSource
             // 

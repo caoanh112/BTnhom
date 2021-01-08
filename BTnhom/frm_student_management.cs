@@ -21,6 +21,7 @@ namespace BTnhom
         SqlCommand cmd;
         SqlDataAdapter dap;
         DataSet ds;
+        
         string sqlconnect = "Data Source=.;Initial Catalog=student_management;Integrated Security=True";
 
         private void frm_student_management_Load(object sender, EventArgs e)
@@ -139,14 +140,68 @@ namespace BTnhom
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
+            grb_details.Text = "Delete information of student:";
             btn_add.Enabled = false;
             btn_edit.Enabled = false;
-            DialogResult re = MessageBox.Show("Do you want delete it?", "Delete", MessageBoxButtons.YesNo);
-            if(re == DialogResult.Yes)
-            {
+            DialogResult re = MessageBox.Show("to delete click button 'save'");
+           
+        }
 
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+        if (conn == null)
+            {
+                conn = new SqlConnection(sqlconnect);
+            }
+        if(conn.State == ConnectionState.Closed)
+            {
+                conn.Open();         
+            }
+            string sql = null;
+        if(btn_add.Enabled == true)
+            {
+                sql = "Select Count(*) From dbo.student_information Where ID = '" + txt_id.Text + "'";
+                cmd = new SqlCommand(sql, conn);
+                int val = (int)cmd.ExecuteScalar();
+
+                if (val > 0)
+                {
+                    MessageBox.Show("ID student have already exist!");
+                    txt_id.Focus();
+                }
+                else
+                {
+                    sql = "INSERT INTO dbo.student_information(ID,First_name,Last_name,Date_birth,Sex,Faculty_code) VALUES (";
+                    sql += "'" + txt_id.Text + "',";
+                    sql += "N'" + txt_first_name.Text + "',";
+                    sql += "N'" + txt_last_name.Text + "',";
+                    sql += "'" + dtp_birth.Value.Date + "',";
+                    sql += "N'" + cmb_sex.Text + "',";
+                    sql += "'" + txt_faculty.Text + "')";
+                }
+                
+            }
+
+            if (btn_edit.Enabled == true)
+            {
+                sql = "Update dbo.student_information SET ";
+                sql += "First_name = N'" + txt_first_name.Text + "',";
+                sql += "Last_name = N'" + txt_last_name.Text + "',";
+                sql += "Date_birth = '" + dtp_birth.Value.Date + "',";
+                sql += "Sex = N'" + cmb_sex.Text + "',";
+                sql += "Faculty_code = '" + txt_faculty.Text + "' ";
+                sql += "Where ID= '" + txt_id.Text + "'";
 
             }
+
+            if (btn_delete.Enabled == true)
+            {
+                sql = "Delete from dbo.student_information Where ID = '" + txt_id.Text + "'";
+            }
+            cmd = new SqlCommand(sql,conn);
+            cmd.ExecuteNonQuery();
+            data_load("SELECT * FROM student_information");            
+            conn.Close();
         }
     }
 }
