@@ -26,6 +26,7 @@ namespace BTnhom
 
         private void frm_student_management_Load(object sender, EventArgs e)
         {
+            //kết nối csdl
             try
             {
                 conn = new SqlConnection(sqlconnect);
@@ -59,6 +60,7 @@ namespace BTnhom
             
         }
 
+        //true ==> enabled ; false ==> disenabled
         private void show_details(Boolean show)
         {
             txt_id.Enabled = show;
@@ -72,6 +74,7 @@ namespace BTnhom
             btn_cancel.Enabled = show;            
         }
 
+        //làm trống form chi tiết
         private void clead_details()
         {
             txt_id.Clear();
@@ -81,6 +84,7 @@ namespace BTnhom
             cmb_sex.SelectedItem = null;
             txt_faculty.Clear();
             
+            
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -89,6 +93,7 @@ namespace BTnhom
             clead_details();
             btn_delete.Enabled = false;
             btn_edit.Enabled = false;
+            btn_save.Enabled = false;
 
             show_details(true);
 
@@ -112,6 +117,7 @@ namespace BTnhom
             }
             catch(Exception ex)
             {
+                MessageBox.Show(ex.Message);
 
             }
         }
@@ -133,6 +139,7 @@ namespace BTnhom
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
+            
             show_details(false);
             btn_add.Enabled = true;
             btn_delete.Enabled = false;
@@ -151,16 +158,19 @@ namespace BTnhom
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-        if (conn == null)
+            
+            
+            
+            if (conn == null)
             {
                 conn = new SqlConnection(sqlconnect);
             }
-        if(conn.State == ConnectionState.Closed)
+            if(conn.State == ConnectionState.Closed)
             {
                 conn.Open();         
             }
             string sql = null;
-        if(btn_add.Enabled == true)
+            if(btn_add.Enabled == true)
             {
                 sql = "Select Count(*) From dbo.student_information Where ID = '" + txt_id.Text + "'";
                 cmd = new SqlCommand(sql, conn);
@@ -168,18 +178,27 @@ namespace BTnhom
 
                 if (val > 0)
                 {
+                    //kiểm tra mã số sinh viên bị trùng
                     MessageBox.Show("ID student have already exist!");
                     txt_id.Focus();
                 }
                 else
                 {
-                    sql = "INSERT INTO dbo.student_information(ID,First_name,Last_name,Date_birth,Sex,Faculty_code) VALUES (";
-                    sql += "'" + txt_id.Text + "',";
-                    sql += "N'" + txt_first_name.Text + "',";
-                    sql += "N'" + txt_last_name.Text + "',";
-                    sql += "'" + dtp_birth.Value.Date + "',";
-                    sql += "N'" + cmb_sex.Text + "',";
-                    sql += "'" + txt_faculty.Text + "')";
+                    if (txt_id.Text.Trim() != "")
+                    {
+                        sql = "INSERT INTO dbo.student_information(ID,First_name,Last_name,Date_birth,Sex,Faculty_code) VALUES (";
+                        sql += "'" + txt_id.Text + "',";
+                        sql += "N'" + txt_first_name.Text + "',";
+                        sql += "N'" + txt_last_name.Text + "',";
+                        sql += "'" + dtp_birth.Value.Date + "',";
+                        sql += "N'" + cmb_sex.Text + "',";
+                        sql += "'" + txt_faculty.Text + "')";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter ID student");
+                        txt_id.Focus();
+                    }
                 }
                 
             }
@@ -193,20 +212,31 @@ namespace BTnhom
                 sql += "Sex = N'" + cmb_sex.Text + "',";
                 sql += "Faculty_code = '" + txt_faculty.Text + "' ";
                 sql += "Where ID= '" + txt_id.Text + "'";
+                
 
             }
 
             if (btn_delete.Enabled == true)
             {
                 sql = "Delete from dbo.student_information Where ID = '" + txt_id.Text + "'";
+                
             }
             cmd = new SqlCommand(sql,conn);
             cmd.ExecuteNonQuery();
             data_load("SELECT * FROM student_information");            
             conn.Close();
-            show_details(false);
+            
             btn_add.Enabled = true;
             
+        }
+
+        private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -132,6 +132,7 @@ namespace BTnhom
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(202, 30);
             this.txt_id.TabIndex = 1;
+            this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
             // 
             // txt_first_name
             // 
