@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace BTnhom
@@ -54,6 +55,16 @@ namespace BTnhom
         {
             frm_student_management student = new frm_student_management();
             student.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_clock.Text = DateTime.Now.ToString("HH:mm");
+        }
+
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }
