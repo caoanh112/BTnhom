@@ -96,6 +96,7 @@ namespace BTnhom
 
         private void dgv_table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            show_details(false);
             btn_edit.Enabled = true;
             btn_delete.Enabled = true;
             
@@ -140,6 +141,7 @@ namespace BTnhom
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
+            show_details(true);
             grb_details.Text = "Delete information of student:";
             btn_add.Enabled = false;
             btn_edit.Enabled = false;
@@ -202,6 +204,9 @@ namespace BTnhom
             cmd.ExecuteNonQuery();
             data_load("SELECT * FROM student_information");            
             conn.Close();
+            show_details(false);
+            btn_add.Enabled = true;
+            
         }
     }
 }
