@@ -17,32 +17,136 @@ namespace BTnhom
             InitializeComponent();
         }
 
-        
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmb_sex_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_faculty_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        SqlConnection conn = null;
+        SqlCommand cmd;
+        SqlDataAdapter dap;
+        DataSet ds;
+        string sqlconnect = "Data Source=.;Initial Catalog=student_management;Integrated Security=True";
 
         private void frm_student_management_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'student_managementDataSet.student_information' table. You can move, or remove it, as needed.
-            this.student_informationTableAdapter.Fill(this.student_managementDataSet.student_information);
+            try
+            {
+                conn = new SqlConnection(sqlconnect);
+                conn.Open();
+                lbl_status.Text += "connected";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
+            data_load("SELECT * FROM student_information");
+
+            btn_edit.Enabled = false;
+            btn_delete.Enabled = false;
+
+            show_details(false);
+
+        }
+
+        private void data_load(string sql)
+        {
+            ds = new DataSet();
+
+            dap = new SqlDataAdapter(sql, conn);
+
+            dap.Fill(ds);
+
+            dgv_table.DataSource = ds.Tables[0];
+
+            
+        }
+
+        private void show_details(Boolean show)
+        {
+            txt_id.Enabled = show;
+            txt_first_name.Enabled = show;
+            txt_last_name.Enabled = show;
+            dtp_birth.Enabled = show;
+            cmb_sex.Enabled = show;
+            txt_faculty.Enabled = show;
+            //ẩn 2 nút save và cancel
+            btn_save.Enabled = show;
+            btn_cancel.Enabled = show;            
+        }
+
+        private void clead_details()
+        {
+            txt_id.Clear();
+            txt_first_name.Clear();
+            txt_last_name.Clear();
+            dtp_birth.Value = DateTime.Now;
+            cmb_sex.SelectedItem = null;
+            txt_faculty.Clear();
+            
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            grb_details.Text = "Add infomation of student:";
+            clead_details();
+            btn_delete.Enabled = false;
+            btn_edit.Enabled = false;
+
+            show_details(true);
+
+        }
+
+        private void dgv_table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btn_edit.Enabled = true;
+            btn_delete.Enabled = true;
             
+
+            try
+            {
+                txt_id.Text = dgv_table[0, e.RowIndex].Value.ToString();
+                txt_first_name.Text = dgv_table[1, e.RowIndex].Value.ToString();
+                txt_last_name.Text = dgv_table[2, e.RowIndex].Value.ToString();
+                dtp_birth.Value = (DateTime)dgv_table[3, e.RowIndex].Value;
+                cmb_sex.Text = dgv_table[4, e.RowIndex].Value.ToString();
+                txt_faculty.Text = dgv_table[5, e.RowIndex].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            DialogResult re = MessageBox.Show("Do you want exit?", "Student management", MessageBoxButtons.YesNo);
+            if (re == DialogResult.Yes) Close();
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            grb_details.Text = "Edit information student:";
+            btn_add.Enabled = false;
+            btn_delete.Enabled = false;
+            show_details(true);
+
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            show_details(false);
+            btn_add.Enabled = true;
+            btn_delete.Enabled = false;
+            btn_edit.Enabled = false;
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            btn_add.Enabled = false;
+            btn_edit.Enabled = false;
+            DialogResult re = MessageBox.Show("Do you want delete it?", "Delete", MessageBoxButtons.YesNo);
+            if(re == DialogResult.Yes)
+            {
+
+
+            }
         }
     }
 }
