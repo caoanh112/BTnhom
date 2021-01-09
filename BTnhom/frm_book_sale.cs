@@ -36,7 +36,7 @@ namespace BTnhom
             else
             {
                 //check num of book is invalid
-                if (txt_num_of_book.Text.Contains(".")==true || txt_num_of_book.Text.Contains(",")==true)
+                if (txt_num_of_book.Text.Contains(".")==true || txt_num_of_book.Text.Contains(",")==true || txt_num_of_book.Text.Trim()=="")
                 {
                     MessageBox.Show("Number of books not invalid!");
                     txt_num_of_book.Focus();
@@ -77,6 +77,14 @@ namespace BTnhom
         {
             DialogResult re = MessageBox.Show("Do you want to exit book sales program?", "Book sales", MessageBoxButtons.YesNo);
             if (re == DialogResult.Yes) Close();
+        }
+
+        private void txt_num_of_book_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!Char.IsDigit(e.KeyChar) && e.KeyChar !=8)
+            {
+                e.Handled = true;
+            }
         }
 
         public void btn_statistics_Click(object sender, EventArgs e)

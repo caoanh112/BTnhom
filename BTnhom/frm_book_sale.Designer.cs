@@ -92,6 +92,7 @@ namespace BTnhom
             this.txt_num_of_book.Name = "txt_num_of_book";
             this.txt_num_of_book.Size = new System.Drawing.Size(164, 30);
             this.txt_num_of_book.TabIndex = 1;
+            this.txt_num_of_book.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_num_of_book_KeyPress);
             // 
             // txt_cus_name
             // 

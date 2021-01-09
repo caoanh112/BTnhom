@@ -52,7 +52,7 @@ namespace BTnhom
             this.btn_filtered_extraction = new System.Windows.Forms.Button();
             this.txt_first_position = new System.Windows.Forms.TextBox();
             this.txt_last_position = new System.Windows.Forms.TextBox();
-            this.num_occurrences = new System.Windows.Forms.TextBox();
+            this.txt_num_occurrences = new System.Windows.Forms.TextBox();
             this.txt_seperation = new System.Windows.Forms.TextBox();
             this.btn_num_upper = new System.Windows.Forms.Button();
             this.txt_new_string = new System.Windows.Forms.TextBox();
@@ -218,7 +218,7 @@ namespace BTnhom
             this.btn_occurrences.Name = "btn_occurrences";
             this.btn_occurrences.Size = new System.Drawing.Size(271, 34);
             this.btn_occurrences.TabIndex = 15;
-            this.btn_occurrences.Text = "Number of occurrences";
+            this.btn_occurrences.Text = "Number of appeared ";
             this.btn_occurrences.UseVisualStyleBackColor = true;
             this.btn_occurrences.Click += new System.EventHandler(this.btn_occurrences_Click);
             // 
@@ -275,7 +275,7 @@ namespace BTnhom
             // txt_first_position
             // 
             this.txt_first_position.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_first_position.Location = new System.Drawing.Point(739, 300);
+            this.txt_first_position.Location = new System.Drawing.Point(739, 296);
             this.txt_first_position.Name = "txt_first_position";
             this.txt_first_position.Size = new System.Drawing.Size(100, 30);
             this.txt_first_position.TabIndex = 10;
@@ -283,23 +283,23 @@ namespace BTnhom
             // txt_last_position
             // 
             this.txt_last_position.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_last_position.Location = new System.Drawing.Point(739, 350);
+            this.txt_last_position.Location = new System.Drawing.Point(739, 346);
             this.txt_last_position.Name = "txt_last_position";
             this.txt_last_position.Size = new System.Drawing.Size(100, 30);
             this.txt_last_position.TabIndex = 12;
             // 
-            // num_occurrences
+            // txt_num_occurrences
             // 
-            this.num_occurrences.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num_occurrences.Location = new System.Drawing.Point(739, 400);
-            this.num_occurrences.Name = "num_occurrences";
-            this.num_occurrences.Size = new System.Drawing.Size(100, 30);
-            this.num_occurrences.TabIndex = 14;
+            this.txt_num_occurrences.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_num_occurrences.Location = new System.Drawing.Point(739, 396);
+            this.txt_num_occurrences.Name = "txt_num_occurrences";
+            this.txt_num_occurrences.Size = new System.Drawing.Size(100, 30);
+            this.txt_num_occurrences.TabIndex = 14;
             // 
             // txt_seperation
             // 
             this.txt_seperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_seperation.Location = new System.Drawing.Point(739, 450);
+            this.txt_seperation.Location = new System.Drawing.Point(739, 446);
             this.txt_seperation.Name = "txt_seperation";
             this.txt_seperation.Size = new System.Drawing.Size(100, 30);
             this.txt_seperation.TabIndex = 16;
@@ -317,7 +317,7 @@ namespace BTnhom
             // txt_new_string
             // 
             this.txt_new_string.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_new_string.Location = new System.Drawing.Point(739, 500);
+            this.txt_new_string.Location = new System.Drawing.Point(739, 496);
             this.txt_new_string.Name = "txt_new_string";
             this.txt_new_string.Size = new System.Drawing.Size(100, 30);
             this.txt_new_string.TabIndex = 18;
@@ -325,7 +325,7 @@ namespace BTnhom
             // txt_del_string
             // 
             this.txt_del_string.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_del_string.Location = new System.Drawing.Point(739, 550);
+            this.txt_del_string.Location = new System.Drawing.Point(739, 546);
             this.txt_del_string.Name = "txt_del_string";
             this.txt_del_string.Size = new System.Drawing.Size(100, 30);
             this.txt_del_string.TabIndex = 21;
@@ -333,7 +333,7 @@ namespace BTnhom
             // txt_replace_string
             // 
             this.txt_replace_string.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_replace_string.Location = new System.Drawing.Point(643, 500);
+            this.txt_replace_string.Location = new System.Drawing.Point(643, 496);
             this.txt_replace_string.Name = "txt_replace_string";
             this.txt_replace_string.Size = new System.Drawing.Size(80, 30);
             this.txt_replace_string.TabIndex = 19;
@@ -343,13 +343,13 @@ namespace BTnhom
             this.txt_insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_insert.Location = new System.Drawing.Point(611, 600);
             this.txt_insert.Name = "txt_insert";
-            this.txt_insert.Size = new System.Drawing.Size(61, 30);
+            this.txt_insert.Size = new System.Drawing.Size(81, 30);
             this.txt_insert.TabIndex = 24;
             // 
             // lbl_position
             // 
             this.lbl_position.AutoSize = true;
-            this.lbl_position.Location = new System.Drawing.Point(674, 603);
+            this.lbl_position.Location = new System.Drawing.Point(698, 607);
             this.lbl_position.Name = "lbl_position";
             this.lbl_position.Size = new System.Drawing.Size(65, 20);
             this.lbl_position.TabIndex = 24;
@@ -358,10 +358,11 @@ namespace BTnhom
             // txt_insert_position
             // 
             this.txt_insert_position.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_insert_position.Location = new System.Drawing.Point(739, 600);
+            this.txt_insert_position.Location = new System.Drawing.Point(769, 600);
             this.txt_insert_position.Name = "txt_insert_position";
-            this.txt_insert_position.Size = new System.Drawing.Size(100, 30);
+            this.txt_insert_position.Size = new System.Drawing.Size(70, 30);
             this.txt_insert_position.TabIndex = 23;
+            this.txt_insert_position.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_insert_position_KeyPress);
             // 
             // txt_filter_p2
             // 
@@ -370,14 +371,16 @@ namespace BTnhom
             this.txt_filter_p2.Name = "txt_filter_p2";
             this.txt_filter_p2.Size = new System.Drawing.Size(70, 30);
             this.txt_filter_p2.TabIndex = 26;
+            this.txt_filter_p2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_filter_p2_KeyPress);
             // 
             // txt_filter_p1
             // 
             this.txt_filter_p1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_filter_p1.Location = new System.Drawing.Point(641, 650);
+            this.txt_filter_p1.Location = new System.Drawing.Point(641, 646);
             this.txt_filter_p1.Name = "txt_filter_p1";
             this.txt_filter_p1.Size = new System.Drawing.Size(70, 30);
             this.txt_filter_p1.TabIndex = 27;
+            this.txt_filter_p1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_filter_p1_KeyPress);
             // 
             // lbl_p1
             // 
@@ -422,7 +425,7 @@ namespace BTnhom
             this.groupBox1.Controls.Add(this.txt_replace_string);
             this.groupBox1.Controls.Add(this.txt_new_string);
             this.groupBox1.Controls.Add(this.txt_seperation);
-            this.groupBox1.Controls.Add(this.num_occurrences);
+            this.groupBox1.Controls.Add(this.txt_num_occurrences);
             this.groupBox1.Controls.Add(this.txt_last_position);
             this.groupBox1.Controls.Add(this.txt_first_position);
             this.groupBox1.Controls.Add(this.btn_chain_optimization);
@@ -512,7 +515,7 @@ namespace BTnhom
         private System.Windows.Forms.Button btn_filtered_extraction;
         private System.Windows.Forms.TextBox txt_first_position;
         private System.Windows.Forms.TextBox txt_last_position;
-        private System.Windows.Forms.TextBox num_occurrences;
+        private System.Windows.Forms.TextBox txt_num_occurrences;
         private System.Windows.Forms.TextBox txt_seperation;
         private System.Windows.Forms.Button btn_num_upper;
         private System.Windows.Forms.TextBox txt_new_string;

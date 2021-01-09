@@ -21,8 +21,17 @@ namespace BTnhom
 
         private void btn_separate_words_Click(object sender, EventArgs e)
         {
-            chain_process chain = new chain_process();
-            txt_output.Text = chain.separation(txt_input.Text, txt_seperation.Text);
+            if (txt_seperation.Text.Trim() == "")
+            {
+                MessageBox.Show("Enter string to separate");
+                txt_seperation.Focus();
+            }
+            else
+            {
+                chain_process chain = new chain_process();
+                txt_output.Text = chain.separation(txt_input.Text, txt_seperation.Text);
+            }
+
         }
 
         private void btn_num_char_Click(object sender, EventArgs e)
@@ -85,46 +94,119 @@ namespace BTnhom
 
         private void btn_first_position_Click(object sender, EventArgs e)
         {
-            chain_process chain = new chain_process();
-            txt_output.Text = "Vị trí cần tìm là " + chain.firstposition(txt_input.Text, txt_first_position.Text).ToString();
+            if (txt_first_position.Text.Trim() == "")
+            {
+                MessageBox.Show("Enter character to find");
+                txt_first_position.Focus();
+            }
+            else
+            {
+                chain_process chain = new chain_process();
+                txt_output.Text = "Position first appearced: " + chain.firstposition(txt_input.Text, txt_first_position.Text.Trim()).ToString();
+            }
         }
 
         private void btn_find_position_last_Click(object sender, EventArgs e)
         {
-            chain_process chain = new chain_process();
-            txt_output.Text = "Vị trí cần tìm là " + chain.lastposition(txt_input.Text, txt_last_position.Text).ToString();
+            if (txt_last_position.Text.Trim() == "")
+            {
+                MessageBox.Show("Enter character to find");
+                txt_last_position.Focus();
+            }
+            else
+            {
+                chain_process chain = new chain_process();
+                txt_output.Text = "Position last appearced: " + chain.lastposition(txt_input.Text, txt_last_position.Text.Trim()).ToString();
+            }
         }
 
         private void btn_occurrences_Click(object sender, EventArgs e)
         {
-            chain_process chain = new chain_process();
-            txt_output.Text = "Số lần xuất hiện là " + chain.Number(txt_input.Text, num_occurrences.Text).ToString();
+            if (txt_num_occurrences.Text.Trim() == "")
+            {
+                MessageBox.Show("Enter character to find");
+                txt_num_occurrences.Focus();
+            }
+            else
+            {
+                chain_process chain = new chain_process();
+                txt_output.Text = "Number of appeared: " + chain.Number(txt_input.Text, txt_num_occurrences.Text.Trim()).ToString();
+            }
         }
 
         private void btn_change_substring_Click(object sender, EventArgs e)
         {
-            chain_process chain = new chain_process();
-            txt_output.Text = chain.change(txt_input.Text, txt_replace_string.Text, txt_new_string.Text);
+            if (txt_replace_string.Text.Trim() == "")
+            {
+                MessageBox.Show("Enter string to replace");
+                txt_replace_string.Focus();
+            }
+            else
+            {
+                if (txt_new_string.Text.Trim() == "")
+                {
+                    MessageBox.Show("Enter string to replace");
+                    txt_new_string.Focus();
+                }
+                else
+                {
+                    chain_process chain = new chain_process();
+                    txt_output.Text = chain.change(txt_input.Text, txt_replace_string.Text, txt_new_string.Text);
+                }
+            }
         }
 
         private void btn_delete_substring_Click(object sender, EventArgs e)
         {
-            chain_process chain = new chain_process();
-            txt_output.Text = chain.delete(txt_input.Text, txt_del_string.Text);
+
+            if (txt_del_string.Text.Trim() == "")
+            {
+                MessageBox.Show("Enter string to delete");
+                txt_del_string.Focus();
+            }
+            else
+            {
+                chain_process chain = new chain_process();
+                txt_output.Text = chain.delete(txt_input.Text, txt_del_string.Text);
+            }
         }
 
         private void btn_insert_string_Click(object sender, EventArgs e)
         {
-            chain_process chain = new chain_process();
-            int p = int.Parse(txt_insert_position.Text);
-            txt_output.Text = chain.insert(txt_input.Text, txt_insert.Text, p);
+            if (txt_insert.Text.Trim() == "")
+            {
+                MessageBox.Show("Enter string to insert");
+                txt_insert.Focus();
+            }
+            else
+            {
+                chain_process chain = new chain_process();
+                int p = int.Parse(txt_insert_position.Text);
+                txt_output.Text = chain.insert(txt_input.Text, txt_insert.Text, p);
+            }
         }
 
         private void btn_filtered_extraction_Click(object sender, EventArgs e)
         {
-            chain_process chain = new chain_process();
-            int p1 = int.Parse(txt_filter_p1.Text), p2 = int.Parse(txt_filter_p2.Text);
-            txt_output.Text = chain.filter(txt_input.Text, p1, p2);
+            if (txt_filter_p1.Text.Trim() == "")
+            {
+                MessageBox.Show("Enter position 1 to insert");
+                txt_filter_p1.Focus();
+            }
+            else
+            {
+                if (txt_filter_p2.Text.Trim() == "")
+                {
+                    MessageBox.Show("Enter position 2 to insert");
+                    txt_filter_p2.Focus();
+                }
+                else
+                {
+                    chain_process chain = new chain_process();
+                    int p1 = int.Parse(txt_filter_p1.Text), p2 = int.Parse(txt_filter_p2.Text);
+                    txt_output.Text = chain.filter(txt_input.Text, p1, p2);
+                }
+            }
 
            
         }
@@ -134,6 +216,30 @@ namespace BTnhom
             chain_process chain = new chain_process();
             txt_output.Text = chain.Count(txt_input.Text, "digit").ToString();
 
+        }
+
+        private void txt_insert_position_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_filter_p1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_filter_p2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
