@@ -91,7 +91,7 @@ namespace BTnhom
             // 
             this.logouttoolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logouttoolStripMenuItem.Image")));
             this.logouttoolStripMenuItem.Name = "logouttoolStripMenuItem";
-            this.logouttoolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.logouttoolStripMenuItem.Size = new System.Drawing.Size(229, 36);
             this.logouttoolStripMenuItem.Text = "Logout";
             this.logouttoolStripMenuItem.Click += new System.EventHandler(this.logouttoolStripMenuItem_Click);
             // 
@@ -100,7 +100,7 @@ namespace BTnhom
             this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(229, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -189,10 +189,11 @@ namespace BTnhom
             this.Controls.Add(this.lbl_clock);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bài tập nhóm 1 ";
+            this.Text = "Homework";
             this.Load += new System.EventHandler(this.frm_main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
