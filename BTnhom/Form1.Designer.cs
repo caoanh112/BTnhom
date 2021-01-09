@@ -34,6 +34,7 @@ namespace BTnhom
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logouttoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.functionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +70,7 @@ namespace BTnhom
             this.fileToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginToolStripMenuItem,
+            this.logouttoolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -81,16 +83,24 @@ namespace BTnhom
             this.loginToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loginToolStripMenuItem.Image")));
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(229, 36);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
+            // logouttoolStripMenuItem
+            // 
+            this.logouttoolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logouttoolStripMenuItem.Image")));
+            this.logouttoolStripMenuItem.Name = "logouttoolStripMenuItem";
+            this.logouttoolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.logouttoolStripMenuItem.Text = "Logout";
+            this.logouttoolStripMenuItem.Click += new System.EventHandler(this.logouttoolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(229, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -153,15 +163,16 @@ namespace BTnhom
             // 
             // lbl_clock
             // 
-            this.lbl_clock.AutoSize = true;
             this.lbl_clock.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_clock.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_clock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_clock.Font = new System.Drawing.Font("Microsoft YaHei", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_clock.ForeColor = System.Drawing.Color.White;
-            this.lbl_clock.Location = new System.Drawing.Point(12, 523);
+            this.lbl_clock.Location = new System.Drawing.Point(0, 36);
             this.lbl_clock.Name = "lbl_clock";
-            this.lbl_clock.Size = new System.Drawing.Size(284, 82);
+            this.lbl_clock.Size = new System.Drawing.Size(951, 595);
             this.lbl_clock.TabIndex = 1;
             this.lbl_clock.Text = "HH:mm";
+            this.lbl_clock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
             // 
@@ -186,7 +197,6 @@ namespace BTnhom
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -205,6 +215,7 @@ namespace BTnhom
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.Label lbl_clock;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem logouttoolStripMenuItem;
     }
 }
 

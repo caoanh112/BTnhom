@@ -42,12 +42,18 @@ namespace BTnhom
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_exitlogin = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_username
@@ -81,7 +87,7 @@ namespace BTnhom
             this.groupBox1.Controls.Add(this.lbl_forgot);
             this.groupBox1.Controls.Add(this.ckb_remember_me);
             this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Location = new System.Drawing.Point(16, 214);
+            this.groupBox1.Location = new System.Drawing.Point(30, 32);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(642, 420);
             this.groupBox1.TabIndex = 0;
@@ -99,7 +105,7 @@ namespace BTnhom
             this.btn_login.Location = new System.Drawing.Point(170, 290);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(310, 70);
-            this.btn_login.TabIndex = 3;
+            this.btn_login.TabIndex = 2;
             this.btn_login.Text = "Login";
             this.btn_login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_login.UseVisualStyleBackColor = false;
@@ -182,10 +188,10 @@ namespace BTnhom
             this.btn_exitlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exitlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exitlogin.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_exitlogin.Location = new System.Drawing.Point(436, 654);
+            this.btn_exitlogin.Location = new System.Drawing.Point(496, 16);
             this.btn_exitlogin.Name = "btn_exitlogin";
             this.btn_exitlogin.Size = new System.Drawing.Size(222, 49);
-            this.btn_exitlogin.TabIndex = 1;
+            this.btn_exitlogin.TabIndex = 0;
             this.btn_exitlogin.Text = "Exit";
             this.btn_exitlogin.UseVisualStyleBackColor = false;
             this.btn_exitlogin.Click += new System.EventHandler(this.btn_exitlogin_Click);
@@ -194,12 +200,42 @@ namespace BTnhom
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(248, 31);
+            this.pictureBox3.Location = new System.Drawing.Point(287, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(188, 177);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(730, 209);
+            this.panel3.TabIndex = 5;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.btn_exitlogin);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 695);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(730, 89);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.groupBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 209);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(730, 486);
+            this.panel5.TabIndex = 0;
             // 
             // frm_login
             // 
@@ -207,16 +243,17 @@ namespace BTnhom
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(676, 747);
+            this.ClientSize = new System.Drawing.Size(730, 784);
             this.ControlBox = false;
-            this.Controls.Add(this.btn_exitlogin);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.DoubleBuffered = true;
             this.Name = "frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form login";
             this.Load += new System.EventHandler(this.frm_login_Load);
+            this.Enter += new System.EventHandler(this.frm_login_Enter);
             this.MouseCaptureChanged += new System.EventHandler(this.frm_login_MouseCaptureChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -227,6 +264,9 @@ namespace BTnhom
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -244,5 +284,8 @@ namespace BTnhom
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbl_forgot;
         private System.Windows.Forms.CheckBox ckb_remember_me;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

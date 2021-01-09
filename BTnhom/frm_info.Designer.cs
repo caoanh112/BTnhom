@@ -33,19 +33,19 @@ namespace BTnhom
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_ = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lbl_sourcecode = new System.Windows.Forms.Label();
             this.lbl_urlgithub = new System.Windows.Forms.Label();
             this.lbl_description = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbl_teamname = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.lbl_teamname = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,30 @@ namespace BTnhom
             this.label1.Text = "Cao Thế Anh - 030234180002";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(207, 188);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(727, 29);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "0987 605 255  -  caotheanh112@outlook.com ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(3, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(174, 31);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Contact:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lbl_sourcecode
             // 
             this.lbl_sourcecode.BackColor = System.Drawing.Color.Transparent;
@@ -124,10 +148,10 @@ namespace BTnhom
             this.lbl_urlgithub.BackColor = System.Drawing.Color.Transparent;
             this.lbl_urlgithub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_urlgithub.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_urlgithub.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbl_urlgithub.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lbl_urlgithub.Location = new System.Drawing.Point(207, 143);
             this.lbl_urlgithub.Name = "lbl_urlgithub";
-            this.lbl_urlgithub.Size = new System.Drawing.Size(737, 40);
+            this.lbl_urlgithub.Size = new System.Drawing.Size(387, 40);
             this.lbl_urlgithub.TabIndex = 2;
             this.lbl_urlgithub.Text = "https://github.com/caoanh112/BTnhom";
             this.lbl_urlgithub.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,53 +205,6 @@ namespace BTnhom
             this.label4.Text = "ITS326_201_D03";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbl_teamname
-            // 
-            this.lbl_teamname.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_teamname.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_teamname.ForeColor = System.Drawing.Color.White;
-            this.lbl_teamname.Location = new System.Drawing.Point(124, 55);
-            this.lbl_teamname.Name = "lbl_teamname";
-            this.lbl_teamname.Size = new System.Drawing.Size(465, 114);
-            this.lbl_teamname.TabIndex = 2;
-            this.lbl_teamname.Text = "Team P vs A";
-            this.lbl_teamname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(614, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 181);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 188);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 31);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Contact:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(207, 188);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(727, 29);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "0987 605 255  -  caotheanh112@outlook.com ";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
@@ -263,6 +240,29 @@ namespace BTnhom
             this.label9.TabIndex = 2;
             this.label9.Text = "ThS. Nguyễn Văn Thọ";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_teamname
+            // 
+            this.lbl_teamname.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_teamname.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_teamname.ForeColor = System.Drawing.Color.White;
+            this.lbl_teamname.Location = new System.Drawing.Point(124, 55);
+            this.lbl_teamname.Name = "lbl_teamname";
+            this.lbl_teamname.Size = new System.Drawing.Size(465, 114);
+            this.lbl_teamname.TabIndex = 2;
+            this.lbl_teamname.Text = "Team P vs A";
+            this.lbl_teamname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(614, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(199, 181);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_info
             // 

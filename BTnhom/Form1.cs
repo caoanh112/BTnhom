@@ -10,18 +10,19 @@ using System.Threading;
 using System.Windows.Forms;
 
 namespace BTnhom
-{
+{   
+       
     public partial class frm_main : Form
     {
         public frm_main()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void informationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_info info = new frm_info();
-            info.Show();
+            info.Show();            
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,8 +33,17 @@ namespace BTnhom
 
         private void processChainToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_process_chain frm_chain = new frm_process_chain();
-            frm_chain.Show();
+            if (check_login.check == false)
+            {
+                MessageBox.Show("You need login before can use it!");
+                frm_login login = new frm_login();
+                login.Show();
+            }
+            else
+            {
+                frm_process_chain frm_chain = new frm_process_chain();
+                frm_chain.Show();
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,14 +57,33 @@ namespace BTnhom
 
         private void bookSalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_book_sale frm_book = new frm_book_sale();
-            frm_book.Show();
+            if (check_login.check == false)
+            {
+                MessageBox.Show("You need login before can use it!");
+                frm_login login = new frm_login();
+                login.Show();
+            }
+            else
+            {
+                frm_book_sale frm_book = new frm_book_sale();
+                frm_book.Show();
+            }           
         }
 
         private void studentManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_student_management student = new frm_student_management();
-            student.Show();
+            if (check_login.check == false)
+            {
+                MessageBox.Show("You need login before can use it!");
+                frm_login login = new frm_login();
+                login.Show();
+            }
+            else
+            {
+                frm_student_management student = new frm_student_management();
+                student.Show();
+            }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -66,5 +95,15 @@ namespace BTnhom
         {
             timer1.Start();
         }
+
+        private void logouttoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            check_login.check = false;
+            MessageBox.Show("Logout sucessful");
+        }
+    }
+    public static class check_login
+    {
+        public static Boolean check = false;
     }
 }

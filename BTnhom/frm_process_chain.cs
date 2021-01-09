@@ -51,6 +51,8 @@ namespace BTnhom
 
         private void btn_num_lowercase_Click(object sender, EventArgs e)
         {
+            chain_process chain = new chain_process();
+            txt_output.Text = chain.Count(txt_input.Text, "lower").ToString();
 
         }
 
@@ -125,6 +127,13 @@ namespace BTnhom
             txt_output.Text = chain.filter(txt_input.Text, p1, p2);
 
            
+        }
+
+        private void btn_num_digit_Click(object sender, EventArgs e)
+        {
+            chain_process chain = new chain_process();
+            txt_output.Text = chain.Count(txt_input.Text, "digit").ToString();
+
         }
     }
 }
