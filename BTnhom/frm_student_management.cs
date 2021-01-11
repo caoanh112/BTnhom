@@ -21,8 +21,10 @@ namespace BTnhom
         SqlCommand cmd;
         SqlDataAdapter dap;
         DataSet ds;
-        
-        string sqlconnect = "Data Source=.;Initial Catalog=student_management;Integrated Security=True";
+
+        string sqlconnect = "Data Source=35.240.156.92,1433; Initial Catalog = dbtest; User ID = admin; Password=freedata";
+
+
 
         private void frm_student_management_Load(object sender, EventArgs e)
         {
