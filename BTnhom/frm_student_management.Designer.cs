@@ -52,11 +52,11 @@ namespace BTnhom
             this.pnl_tile = new System.Windows.Forms.Panel();
             this.lbl_tile = new System.Windows.Forms.Label();
             this.grb_details = new System.Windows.Forms.GroupBox();
-            this.pnl_button = new System.Windows.Forms.Panel();
-            this.dgv_table = new System.Windows.Forms.DataGridView();
             this.lbl_status = new System.Windows.Forms.Label();
             this.btn_cancel = new System.Windows.Forms.Button();
+            this.pnl_button = new System.Windows.Forms.Panel();
             this.btn_exit = new System.Windows.Forms.Button();
+            this.dgv_table = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.studentinformationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.student_managementDataSet)).BeginInit();
             this.pnl_tile.SuspendLayout();
@@ -131,7 +131,7 @@ namespace BTnhom
             this.txt_id.Location = new System.Drawing.Point(136, 60);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(202, 30);
-            this.txt_id.TabIndex = 1;
+            this.txt_id.TabIndex = 0;
             this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
             // 
             // txt_first_name
@@ -148,7 +148,7 @@ namespace BTnhom
             this.txt_last_name.Location = new System.Drawing.Point(136, 208);
             this.txt_last_name.Name = "txt_last_name";
             this.txt_last_name.Size = new System.Drawing.Size(202, 30);
-            this.txt_last_name.TabIndex = 1;
+            this.txt_last_name.TabIndex = 2;
             // 
             // txt_faculty
             // 
@@ -156,7 +156,7 @@ namespace BTnhom
             this.txt_faculty.Location = new System.Drawing.Point(136, 460);
             this.txt_faculty.Name = "txt_faculty";
             this.txt_faculty.Size = new System.Drawing.Size(202, 30);
-            this.txt_faculty.TabIndex = 1;
+            this.txt_faculty.TabIndex = 5;
             // 
             // cmb_sex
             // 
@@ -168,7 +168,7 @@ namespace BTnhom
             this.cmb_sex.Location = new System.Drawing.Point(136, 372);
             this.cmb_sex.Name = "cmb_sex";
             this.cmb_sex.Size = new System.Drawing.Size(202, 33);
-            this.cmb_sex.TabIndex = 2;
+            this.cmb_sex.TabIndex = 4;
             // 
             // dtp_birth
             // 
@@ -184,7 +184,7 @@ namespace BTnhom
             this.btn_add.Location = new System.Drawing.Point(57, 15);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(108, 38);
-            this.btn_add.TabIndex = 4;
+            this.btn_add.TabIndex = 0;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
@@ -195,7 +195,7 @@ namespace BTnhom
             this.btn_edit.Location = new System.Drawing.Point(210, 15);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(108, 38);
-            this.btn_edit.TabIndex = 4;
+            this.btn_edit.TabIndex = 1;
             this.btn_edit.Text = "Edit";
             this.btn_edit.UseVisualStyleBackColor = true;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
@@ -206,7 +206,7 @@ namespace BTnhom
             this.btn_delete.Location = new System.Drawing.Point(362, 15);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(108, 38);
-            this.btn_delete.TabIndex = 4;
+            this.btn_delete.TabIndex = 2;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
@@ -217,7 +217,7 @@ namespace BTnhom
             this.btn_save.Location = new System.Drawing.Point(50, 598);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(108, 38);
-            this.btn_save.TabIndex = 4;
+            this.btn_save.TabIndex = 6;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
@@ -278,36 +278,9 @@ namespace BTnhom
             this.grb_details.Location = new System.Drawing.Point(990, 119);
             this.grb_details.Name = "grb_details";
             this.grb_details.Size = new System.Drawing.Size(354, 788);
-            this.grb_details.TabIndex = 7;
+            this.grb_details.TabIndex = 1;
             this.grb_details.TabStop = false;
             this.grb_details.Text = "Details";
-            // 
-            // pnl_button
-            // 
-            this.pnl_button.Controls.Add(this.btn_add);
-            this.pnl_button.Controls.Add(this.btn_exit);
-            this.pnl_button.Controls.Add(this.btn_delete);
-            this.pnl_button.Controls.Add(this.btn_edit);
-            this.pnl_button.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_button.Location = new System.Drawing.Point(0, 832);
-            this.pnl_button.Name = "pnl_button";
-            this.pnl_button.Size = new System.Drawing.Size(990, 75);
-            this.pnl_button.TabIndex = 8;
-            // 
-            // dgv_table
-            // 
-            this.dgv_table.AllowUserToAddRows = false;
-            this.dgv_table.AllowUserToDeleteRows = false;
-            this.dgv_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_table.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_table.Location = new System.Drawing.Point(0, 119);
-            this.dgv_table.Name = "dgv_table";
-            this.dgv_table.ReadOnly = true;
-            this.dgv_table.RowHeadersWidth = 62;
-            this.dgv_table.RowTemplate.Height = 28;
-            this.dgv_table.Size = new System.Drawing.Size(990, 713);
-            this.dgv_table.TabIndex = 9;
-            this.dgv_table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_table_CellContentClick);
             // 
             // lbl_status
             // 
@@ -326,10 +299,22 @@ namespace BTnhom
             this.btn_cancel.Location = new System.Drawing.Point(230, 598);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(108, 38);
-            this.btn_cancel.TabIndex = 4;
+            this.btn_cancel.TabIndex = 7;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // pnl_button
+            // 
+            this.pnl_button.Controls.Add(this.btn_add);
+            this.pnl_button.Controls.Add(this.btn_exit);
+            this.pnl_button.Controls.Add(this.btn_delete);
+            this.pnl_button.Controls.Add(this.btn_edit);
+            this.pnl_button.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_button.Location = new System.Drawing.Point(0, 832);
+            this.pnl_button.Name = "pnl_button";
+            this.pnl_button.Size = new System.Drawing.Size(990, 75);
+            this.pnl_button.TabIndex = 0;
             // 
             // btn_exit
             // 
@@ -337,10 +322,25 @@ namespace BTnhom
             this.btn_exit.Location = new System.Drawing.Point(850, 15);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(108, 38);
-            this.btn_exit.TabIndex = 4;
+            this.btn_exit.TabIndex = 3;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
+            // dgv_table
+            // 
+            this.dgv_table.AllowUserToAddRows = false;
+            this.dgv_table.AllowUserToDeleteRows = false;
+            this.dgv_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_table.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_table.Location = new System.Drawing.Point(0, 119);
+            this.dgv_table.Name = "dgv_table";
+            this.dgv_table.ReadOnly = true;
+            this.dgv_table.RowHeadersWidth = 62;
+            this.dgv_table.RowTemplate.Height = 28;
+            this.dgv_table.Size = new System.Drawing.Size(990, 713);
+            this.dgv_table.TabIndex = 9;
+            this.dgv_table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_table_CellContentClick);
             // 
             // frm_student_management
             // 
