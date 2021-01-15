@@ -125,6 +125,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>student_managementDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="testgit.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
